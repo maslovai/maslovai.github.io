@@ -127,6 +127,10 @@ img.img-gallery{
   border-radius: 5%;
 }
 
+.img-gallery:hover {
+  width: 60%;
+}
+
 
 #gallery li a p
 {
