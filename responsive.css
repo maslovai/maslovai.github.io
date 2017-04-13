@@ -83,10 +83,21 @@ float: left;
   .hamburger{
     visibility: visible;
   }
-  ul#gallery
+  /*ul#gallery
   {
     display: block;
+  }*/
+
+  #gallery li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
+
+  #gallery li a{
+    width: 100%;
+  }
+
   #my-blog,
   #my-contact{
     display: flex;
