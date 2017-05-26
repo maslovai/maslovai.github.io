@@ -4,12 +4,12 @@
   const repos = {};
   repos.all = [];
   repos.requestRepos = function() {
-    console.log("HEEEEYYYY!");
+    //console.log("HEEEEYYYY!");
     $.ajax({
      url : 'https://api.github.com/user/repos?type=owner',
      method: 'GET',
      headers: {
-       Authorization: 'token ' + gitHubToken
+       Authorization: 'token '+ gitHubToken
      }
     })
     .then(results => {
@@ -24,6 +24,5 @@
       console.log(error);
     });
   }
-  // repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;
 })(window);
