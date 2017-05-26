@@ -1,9 +1,9 @@
 (function(module){
 
-  const myBlog = {};
-  myBlog.show = function(){
-    $("#my-blog").show;
-    $("#my-blog").siblings().hide;
+  const myResume = {};
+  myResume.show = function(){
+    $("#my-resume").show().siblings().hide();
+
   }
-  module.myBlog = myBlog;
+  module.myResume = myResume;
 })(window);
