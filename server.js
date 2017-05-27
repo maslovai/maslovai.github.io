@@ -11,6 +11,9 @@ app.use(express.static(__dirname + '/'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
+app.get('*', (req, res) => {
+  res.sendFile('index.html', { root: '.' })
+});
 
 // function proxyGitHub(request, response) {
 //   console.log('Routing GitHub request for', request.params[0]);
