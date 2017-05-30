@@ -13,7 +13,7 @@
   myPortfolio.listRepos = function(){
     ui();
     $('#about ul').append(
-    app.repos.with('name').map(render)
+    myPortfolio.repos.with('name').map(render)
   );
 };
     // repos.requestRepos();
