@@ -9,14 +9,18 @@
     $repos.empty();
     $repos.show().siblings().hide();
   };
-  // var render = Handlebars.compile($('#repo-template').html());
+  var render = Handlebars.compile($('#repo-template').html());
   myPortfolio.listRepos = function(){
     ui();
-    repos.requestRepos();
+    $('#about ul').append(
+    app.repos.with('name').map(render)
+  );
+};
+    // repos.requestRepos();
     // $('#repos').append(
     //   reposArray.with('name').map(render)
     // );
-  };
+  // };
   $("#view-repos").click(myPortfolio.listRepos());
   // myPortfolio.listRepos();
   module.myPortfolio = myPortfolio;

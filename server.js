@@ -15,18 +15,16 @@ app.get('*', (req, res) => {
   res.sendFile('index.html', { root: '.' })
 });
 
-// function proxyGitHub(request, response) {
-//   console.log('Routing GitHub request for', request.params[0]);
-//   (requestProxy({
-//     url: `https://api.github.com/${request.params[0]}`,
-//     headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}
-//   }))(request, response);
-// }
-// app.get('*', (req, res) => {
-//   res.sendFile('index.html', { root: '.' })
-// });
+function proxyGitHub(request, response) {
+  console.log('Routing GitHub request for', request.params[0]);
+  (requestProxy({
+    url: `https://api.github.com/${request.params[0]}`,
+    headers: {Authorization: `token ${process.env.TOKEN}`}
+  }))(request, response);
+}
 
-// app.get('/github/*', proxyGitHub);
+
+app.get('/github/*', proxyGitHub);
 app.listen(PORT);
 
 
