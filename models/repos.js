@@ -15,7 +15,7 @@
     .then(results => {
       repos.all = results;
       console.log(repos.all);
-      var render = Handlebars.compile($('#repo-template').html());
+      // var render = Handlebars.compile($('#repo-template').html());
       // repos.all.forEach(ele=> {
       //   $('#repos').append('<li>' + render(ele) + '</li>')
       // })
