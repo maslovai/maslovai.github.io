@@ -136,6 +136,9 @@ img.img-gallery{
   color: #bdc3c7;
 }
 
+#repos li{
+  list-style: none;
+}
 body{
 background-color: #fff;
   color: #999;
